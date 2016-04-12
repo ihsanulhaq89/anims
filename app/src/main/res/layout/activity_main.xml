@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/container1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--<fragment-->
+                <!--android:id="@+id/one"-->
+                <!--class="com.sample.animations.FirstFragment"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="200dp" />-->
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_below="@+id/container1"
+            android:layout_above="@+id/container3"
+            android:id="@+id/container2"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent">
+
+            <!--<fragment-->
+                <!--android:id="@+id/two"-->
+                <!--class="com.sample.animations.SecondFragment"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent" />-->
+        </FrameLayout>
+        <FrameLayout
+            android:layout_alignParentBottom="true"
+            android:id="@+id/container3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        </FrameLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
