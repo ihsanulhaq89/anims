@@ -8,7 +8,25 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="#00FF00"
     tools:context=".MainActivity">
-
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/image"
+            android:src="@drawable/d"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+        <ProgressBar
+            android:visibility="invisible"
+            android:id="@+id/progress"
+            android:layout_centerInParent="true"
+            style="@android:style/Widget.Holo.Light.ProgressBar.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+    </RelativeLayout>
     <TextView
         android:textColor="@android:color/white"
         android:text="sit tight, and we'll let you know whe it's ready"

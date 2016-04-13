@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private View container1;
@@ -32,9 +33,9 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-        fragmentTransaction.setCustomAnimations(R.anim.slide_down,
-                R.anim.slide_up_exit, R.anim.slide_down,
-                R.anim.slide_up_exit);
+//        fragmentTransaction.setCustomAnimations(R.anim.slide_down,
+//                R.anim.slide_up_exit, R.anim.slide_down,
+//                R.anim.slide_up_exit);
         fragmentTransaction.add(R.id.container1, firstFragment, "HELLO");
         fragmentTransaction.add(R.id.container2, secondFragment, "HELLO2");
         fragmentTransaction.commit();
@@ -71,12 +72,7 @@ public class MainActivity extends AppCompatActivity {
                 fragmentTransaction.commit();
                 return true;
             } else if (count == 3) {
-//
-//                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-//                fragmentTransaction.setCustomAnimations(R.anim.slide_down,
-//                        R.anim.slide_up_exit, R.anim.slide_down,
-//                        R.anim.slide_up_exit);
-//                fragmentTransaction.replace(R.id.container1, new Fragment()).commit();
+
                 getFragmentManager().beginTransaction()
                         .setCustomAnimations(R.anim.slide_up_enter,
                                 R.anim.slide_up_exit, R.anim.slide_up_enter,
@@ -85,10 +81,8 @@ public class MainActivity extends AppCompatActivity {
                         .add(R.id.container3, new FourthFragment())
                         .commit();
             } else {
-                //  getFragmentManager().beginTransaction()
 
-                //   .setCustomAnimations(R.anim.slide_up_enter, R.anim.slide_up_enter) // Bottom Fragment Animation
-
+                Toast.makeText(this, "End of Animations", Toast.LENGTH_SHORT).show();
             }
         }
 
