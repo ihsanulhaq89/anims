@@ -15,7 +15,7 @@
         android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/image"
-            android:src="@drawable/d"
+            android:src="@drawable/abc_ic_star_black_36dp"
             android:layout_width="100dp"
             android:layout_height="100dp" />
         <ProgressBar
