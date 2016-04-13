@@ -9,11 +9,20 @@
     android:background="#FF0000"
     tools:context=".MainActivity">
     <TextView
+        android:id="@+id/tv1"
         android:textColor="@android:color/white"
         android:text="Order Details"
         android:textSize="30sp"
         android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_below="@+id/tv1"
+        android:textColor="@android:color/white"
+        android:text="More Order Details"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </RelativeLayout>
